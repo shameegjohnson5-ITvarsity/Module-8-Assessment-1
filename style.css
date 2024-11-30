@@ -1,0 +1,135 @@
+html, body {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Make width and height include padding and borders */
+    height: 100%; /* Makes the body fill the viewport height */
+    width: 100%; /* Ensures it spans the entire viewport width */
+    
+}
+
+body{
+    font-family: sans-serif;
+    
+    
+    background-image: url('images/pexels-jessbaileydesign-934011.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    
+
+}
+
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*    background-color: red;*/
+    width: 40%;
+    margin: 0 auto; 
+    text-align: center;
+    align-items: center;
+    height:90vh;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    border: 1px solid lightgray;
+    box-shadow: 0 5px 12px lightgray;
+    border-radius: 0.625rem;
+   margin-top:50px;
+    
+    background-color: white;
+
+   
+}
+
+
+.login-form label{
+    font-size: clamp(0.9rem, 4vw, 1.6rem);
+}
+
+.usernameField{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    text-align: left;
+}
+
+.passwordField{
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+    width: 500px; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 0.625rem;
+    font-size: clamp(0.5rem, 4vw, 1.6rem);
+    box-shadow: 0 5px 12px lightgray; 
+    outline: none; 
+}
+
+form p{
+    font-size: 25px;
+    color:red;
+}
+
+form a{
+    text-decoration: none;
+    font-size: clamp(1.0rem, 4vw, 1.6rem);
+    color:white;
+    background-color: crimson;
+    padding: 10px 20px;
+    border-radius: 0.625rem;
+    box-shadow: 0 5px 12px lightgray;
+}
+
+.fa-circle-exclamation{
+    color:red;
+}
+
+.comingSoon{
+    text-align: center;
+    margin-top:20rem;
+    font-size: 3rem;
+}
+
+/*========================================================================Media Query=======================================================================*/
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .login-form {
+        height: 60vh ;
+        width:80%;
+    }
+    
+     input[type="text"], input[type="password"] {
+        width:200px;
+    }
+    
+    form p{
+        position: relative;
+        width:200px;
+        font-size: 15px;
+        
+  overflow-wrap: break-word;  /* Ensure words break if they overflow */
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 900px){
+    .login-form {
+        height: 60vh ;
+        width:80%;
+    }
+    
+    form p{
+        font-size: 20px;
+    }
+    
+   
+}

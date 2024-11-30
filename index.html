@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="fontAwesome/css/all.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        
+        <div class="login-form">
+            
+            <p>Welcome to <b>Meegies!</b><br> Please log in</p><br/>
+
+            <form> 
+                <div class="usernameField"><label for="usernameInput"> Username:</label><input type="text" id="usernameInput"/></div>
+                <div class="passwordField"><label for="passwordInput"> Password:</label><input type="password" id="passwordInput"/></div>
+                <p id="message"></p>
+                <br/>
+                 <a href="comingSoon.html" onclick="verifyUser()">Log in</a>
+            </form>
+        </div>
+        
+        
+        <script> 
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+                
+                checkUserCreds(username, password);
+            }
+            
+            function checkUserCreds(username, password){
+                var systemUsername = "Bond";
+                var systemPassword = "007";
+                
+                if (username == systemUsername && password == systemPassword) {
+                    document.getElementById("message").innerHTML = "We are teleporting you!";
+                } else {
+                    document.getElementById("message").innerHTML = "Hold on buddy.. Username or password incorrect!";
+                    event.preventDefault();
+                }
+            }
+        </script>
+    
+        
+    </body>
+</html>
+
+
+
